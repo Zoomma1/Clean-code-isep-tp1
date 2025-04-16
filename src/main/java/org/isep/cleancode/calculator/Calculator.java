@@ -1,8 +1,10 @@
 package org.isep.cleancode.calculator;
 
 public class Calculator {
-    public double evaluateMathExpression(String expression) {
+    private final ExpressionParser parser = new ExpressionParser();
 
-        return 0;
+    public double evaluateMathExpression(String expression) {
+        return parser.parse(expression);
     }
 }
+
